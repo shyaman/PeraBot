@@ -8,7 +8,7 @@ An **intelligent** chatbot who is going to help university students and staff re
 - Puwasuru Ihalagedara 
 - Shyaman Madhawa
 
-## Features
+### Features
 
 - 
 
