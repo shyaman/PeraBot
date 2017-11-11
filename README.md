@@ -4,14 +4,14 @@ An **intelligent** chatbot who is going to help university students and staff re
 
 ### Project Members
 
-Sandali Dewni Lokuge
-Puwasuru Ihalagedara 
-Shyaman Madhawa
+- Sandali Dewni Lokuge
+- Puwasuru Ihalagedara 
+- Shyaman Madhawa
 
 _This is an undergraduate project for the subject CO227_
 
 ### Support or Contact
 
-Sandali Dewni Lokuge    `sdewnilokuge@gmail.com `
-Puwasuru Ihalagedara    `puwasuru95@gmail.com `
-Shyaman Madhawa         `shayaman321@gmail.com`
+- Sandali Dewni Lokuge    `sdewnilokuge@gmail.com `
+- Puwasuru Ihalagedara    `puwasuru95@gmail.com `
+- Shyaman Madhawa         `shayaman321@gmail.com`
