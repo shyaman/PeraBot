@@ -12,7 +12,8 @@ An **intelligent** chatbot who is going to help university students and staff re
 
 - Anyone can get the contact details of the academic and non academic staff the faculty
 - The students can make appointments for lecturers
-- The students can ask about their subject details 
+- The students can ask about their subject details
+
 _eg: Subjects of semester 4
     Total credits of semester 3
     Number of credits that I have earned
