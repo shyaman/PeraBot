@@ -14,19 +14,22 @@ An **intelligent** chatbot who is going to help university students and staff re
 - The students can make appointments for lecturers
 - The students can ask about their subject details
 
-_eg: Subjects of semester 4
+eg: Subjects of semester 4
     Total credits of semester 3
     Number of credits that I have earned
     Lecturer of CO226
     Number of credits of software construction
 - The bot able to give the current gpa and grades of each subjects when a student asked
-_eg: Current gpa
+
+eg: Current gpa
     What's my grade of Electronics 1?
 - The bot let the students to know about their upcoming submissions
-_eg: What do I have to submit tomorrow?
+
+eg: What do I have to submit tomorrow?
     What are my submissions?
 - Both students and lecturers can get to know about their timetables as well as the lecture rooms.
-_eg: What do I have after lunch break?
+
+eg: What do I have after lunch break?
     Tomorrow time table 
     What is the next subject?
     Where will be CO227 lecture conducted?
