@@ -61,7 +61,7 @@ eg: What do I have after lunch break?
 
 - Then we considered about Wit.ai and Dialogflow (Api.ai).
 
--Wit.ai is a natural language interface for applications that can transform sentences into structured data. Dialogflow is a natural language tool dedicated to designing unique conversation scenarios, degenerating corresponding actions and analyzing interactions with users.
+- Wit.ai is a natural language interface for applications that can transform sentences into structured data. Dialogflow is a natural language tool dedicated to designing unique conversation scenarios, degenerating corresponding actions and analyzing interactions with users.
 
 - Unlike Wit.ai, Dialogflow provides one-click integrations with the platform Facebook Messenger. So that using Dialogflow makes the development of PeraBot much easier. 
 
