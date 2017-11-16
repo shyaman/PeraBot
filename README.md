@@ -42,15 +42,13 @@ eg: What do I have after lunch break?
 </pre>
 - The lecturers can check the timetable and can add extra lectures according to free lecture slots or cancel lectures
 
-_This is an undergraduate project for the subject CO227_
-
 ### Support or Contact
 
 - Sandali Dewni Lokuge    `sdewnilokuge@gmail.com `
 - Puwasuru Ihalagedara    `puwasuru95@gmail.com `
 - Shyaman Madhawa         `shayaman321@gmail.com`
 
-
+_This is an undergraduate project for the subject CO227_
 
 
 
