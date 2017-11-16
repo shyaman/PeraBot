@@ -43,22 +43,22 @@ eg: What do I have after lunch break?
 - The lecturers can check the timetable and can add extra lectures according to free lecture slots or cancel lectures
 
 ### Technology 
--To make our ChatBot intelligent, we looked for some platforms of Natural Language Processing NLP. 
--Then we got to know about some NLP technologies that were listed below.
+- To make our ChatBot intelligent, we looked for some platforms of Natural Language Processing NLP. 
+- Then we got to know about some NLP technologies that were listed below.
 <pre>
 1.	NLP libraries such as TextBlob, Stanford’s CoreNLP, SpaCy
 2.	Wit.ai
 3.	Dialogflow (Api.ai)
 </pre>
 
--TextBlob is built on top of NLTK, and it's more easily-accessible. This is the favorite library for fast-prototyping or building applications that don't require highly optimized performance. 
--Stanford's CoreNLP is a Java library with Python wrappers. It's in many existing production systems due to its speed.
--SpaCy is a new NLP library that's designed to be fast, streamlined, and production-ready. It's not as widely adopted, but if we are going to build a new application, we have to give it a try. It can be memory intensive and doesn’t attempt to cover the whole statistical NLP.
--Here since we are going to use BotPress as the development platform of our ChatBot, we were unable to find a method to integrate those NLP libraries to the BotPress. So that we gave up the idea of using NLP libraries.
--Then we considered about Wit.ai and Dialogflow (Api.ai).
+- TextBlob is built on top of NLTK, and it's more easily-accessible. This is the favorite library for fast-prototyping or building applications that don't require highly optimized performance. 
+- Stanford's CoreNLP is a Java library with Python wrappers. It's in many existing production systems due to its speed.
+- SpaCy is a new NLP library that's designed to be fast, streamlined, and production-ready. It's not as widely adopted, but if we are going to build a new application, we have to give it a try. It can be memory intensive and doesn’t attempt to cover the whole statistical NLP.
+- Here since we are going to use BotPress as the development platform of our ChatBot, we were unable to find a method to integrate those NLP libraries to the BotPress. So that we gave up the idea of using NLP libraries.
+- Then we considered about Wit.ai and Dialogflow (Api.ai).
 -Wit.ai is a natural language interface for applications that can transform sentences into structured data. Dialogflow is a natural language tool dedicated to designing unique conversation scenarios, degenerating corresponding actions and analyzing interactions with users.
--Unlike Wit.ai, Dialogflow provides one-click integrations with the platform Facebook Messenger. So that using Dialogflow makes the development of PeraBot much easier. 
--So that the chosen NLP technology is Dialogflow (Api.ai)
+- Unlike Wit.ai, Dialogflow provides one-click integrations with the platform Facebook Messenger. So that using Dialogflow makes the development of PeraBot much easier. 
+- So that the chosen NLP technology is Dialogflow (Api.ai)
 
 ### Support or Contact
 
