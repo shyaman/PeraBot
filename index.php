@@ -1,5 +1,5 @@
 <?php 
 require_once('inc/connect.php'); 
-echo "hello world";
+echo "hello world heee";
 
 ?>
