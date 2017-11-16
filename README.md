@@ -23,7 +23,7 @@ eg: Subjects of semester 4
 </pre>
 - The bot able to give the current gpa and grades of each subjects when a student asked
 <pre>
-eg: Current gpa <br />
+eg: Current gpa 
     What's my grade of Electronics 1? 
 </pre>
 
