@@ -71,7 +71,7 @@ eg: What do I have after lunch break?
 
 ### Milestone 1 - Impliment the feature of retrieving the contact details of the academic and non academic staff the faculty from the bot
 
-_16 Nov 2017 - Present
+_16 Nov 2017 - Present_
 ### Support or Contact
 
 - Sandali Dewni Lokuge    `sdewnilokuge@gmail.com `
