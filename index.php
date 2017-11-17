@@ -6,12 +6,11 @@ echo "hello world heee";
       ,[lName]
       ,[mailAddress]
   FROM [dbo].[contacts]";
-    $qDep = mysqli_query($conn,$qD);
-    $DNo = mysqli_fetch_assoc($qDep);
+    $qDep = $conn->query("qD");
     
     echo "<table>"; 
         echo '<tr><th>fName</th><th>lName</th><th>email</th></tr>';
-        while($row = mysqli_fetch_assoc($result)){  
+        while($row = $qDep->fetch()){  
             echo "<tr><td>" . $row['fName'] . "</td><td>" . $row['lName'] . "</td><td>" . $row['email'] . "</td></tr>";  
             }
 
