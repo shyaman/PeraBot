@@ -4,7 +4,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = ("SELECT * FROM contacts");
-	$stat = $conn->query("sql");
+	$stat = $conn->query("$sql");
 	$row = $qDep->fetch();
 	echo "$row[0] $row[1] $row[2]";
 
