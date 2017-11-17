@@ -42,8 +42,9 @@ eg: What do I have after lunch break?
 </pre>
 - The lecturers can check the timetable and can add extra lectures according to free lecture slots or cancel lectures
 
-### Miletones
-### Milestone 0 - Finding suitable technology
+## Miletones
+
+#### Milestone 0 - Finding suitable technology
 
 - To make our ChatBot intelligent, we looked for some platforms of Natural Language Processing NLP. 
 - Then we got to know about some NLP technologies that were listed below.
@@ -81,9 +82,3 @@ _16 Nov 2017 - Present_
 - Shyaman Madhawa         `shayaman321@gmail.com`
 
 _This is an undergraduate project for the subject CO227_
-
-
-
-## Project log
-
-- ##### 11/11/2017
