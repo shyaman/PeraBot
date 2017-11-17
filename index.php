@@ -2,10 +2,7 @@
 require_once('inc/connect.php'); 
 echo "hello world heee";
 
-	$qD = "SELECT TOP (1000) [fName]
-      ,[lName]
-      ,[mailAddress]
-  FROM [dbo].[contacts]";
+	$qD = "SELECT * FROM contacts";
     $qDep = $conn->query("qD");
     
     echo "<table>"; 
