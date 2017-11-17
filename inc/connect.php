@@ -5,7 +5,8 @@ $user = 'azure';
 $password = '6#vWHD_$';
 
 try {
-    $dbh = new PDO($dsn, $user, $password);
+    $conn = new PDO($dsn, $user, $password);
+
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
     exit;
