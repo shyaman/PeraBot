@@ -6,6 +6,12 @@ $password = '6#vWHD_$';
 
 try {
     $conn = new PDO($dsn, $user, $password);
+    $sql = ("SELECT * FROM contacts");
+ 	$stat = $conn->query("$sql");
+ 	$row = $qDep->fetch();
+ 	echo "$row[0] $row[1] $row[2]";
+
+ 	$conn = NULL;
 
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
