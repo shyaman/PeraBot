@@ -8,9 +8,11 @@
 	echo "<table>"; 
 	echo '<tr><th>fName</th><th>lName</th><th>email</th></tr>';
 	while($row = mysqli_fetch_assoc($result)){  
-		echo "<tr><td>" . $row['fName'] . "</td><td>" . $row['lName'] . "</td><td>" . $row['email'] . "</td></tr>";  
+		echo "<tr><td>" . $row['fName'] . "</td><td>" . $row['lName'] . "</td><td>" . $row['mailAddress'] . "</td></tr>";  
 	}
 
 	echo "</table>";
 
+
+	mysqli_close($connection);
 ?>
