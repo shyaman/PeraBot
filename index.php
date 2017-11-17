@@ -10,7 +10,7 @@ echo "hello world heee";
     
     echo "<table>"; 
         echo '<tr><th>fName</th><th>lName</th><th>email</th></tr>';
-        while($row = $qDep->fetch()){  
+        while($row = $qDep->fetch();){  
             echo "<tr><td>" . $row['fName'] . "</td><td>" . $row['lName'] . "</td><td>" . $row['email'] . "</td></tr>";  
             }
 
