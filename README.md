@@ -42,7 +42,7 @@ eg: What do I have after lunch break?
 </pre>
 - The lecturers can check the timetable and can add extra lectures according to free lecture slots or cancel lectures
 
-## Miletones
+### Miletones
 
 #### Milestone 0 - Finding suitable technology
 
@@ -70,7 +70,7 @@ eg: What do I have after lunch break?
 
 - So that the chosen NLP technology is Dialogflow (Api.ai)
 
-### Milestone 1 - Implimenting the feature of retrieving the contact details of the academic and non academic staff the faculty from the bot
+#### Milestone 1 - Implimenting the feature of retrieving the contact details of the academic and non academic staff the faculty from the bot
 
 _16 Nov 2017 - Present_
 
