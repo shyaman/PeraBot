@@ -28,7 +28,7 @@
 
 				echo $mail['mailAddress']; //testing
 
-				$speech = "Email address of $person is $mail['mailAddress']" ;
+				$speech = "Email address of $person is '{$mail['mailAddress']}'" ;
 
 				//create reponse to the dilogflow and echo it
 				$response = new \stdClass();
