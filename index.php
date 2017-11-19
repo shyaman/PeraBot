@@ -29,7 +29,7 @@
 					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
 					$result = mysqli_query($connection,$query);
 					$contactDetail = mysqli_fetch_assoc($result);
-					$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone Number : {$contactDetail['phoneNumber']}" ;
+					$speech = "Email address : {$contactDetail['mailAddress']} Telephone Number : {$contactDetail['mailAddress']}" ;
 				}
 
 				//create reponse to the dilogflow and echo it
