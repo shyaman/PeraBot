@@ -20,14 +20,12 @@
 				
 				if($infoType == 'email address'){
 					$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
-				}else if($infoType ==''){
+				}else if($infoType == ''){
 					$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
-				}else if($infoType =='telephone number'){
+				}else if($infoType == 'telephone number'){
 					$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
 				}
 
-				
-					
 				//create reponse to the dilogflow and echo it
 				$response = new \stdClass();
 				$response->speech = $speech;
