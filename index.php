@@ -21,13 +21,14 @@
 				$splitName = explode(' ', $person);
 
 				echo $splitName[0];
+
 				$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[0]'"; 
 			    $result = mysqli_query($connection,$query);
 			    $mail = mysqli_fetch_assoc($result);
 
-				echo $mail; //testing
+				echo $mail[0]; //testing
 
-				$speech = "Email address of $person is $mail" ;
+				$speech = "Email address of $person is $mail[0]" ;
 
 				//create reponse to the dilogflow and echo it
 				$response = new \stdClass();
