@@ -10,14 +10,25 @@
 			case 'get_contact_information':
 				//include ('features/contacInformation');
 				$person =  $param->person;	//extract person name
-				$infoType=$param->information->type; // extract information type
+				$infoType=$param->information-type; // extract information type
 				
 				$splitName = explode(' ', $person);
-					
+				if($infoType == 'email address'){
 					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
 					$result = mysqli_query($connection,$query);
-					$contactDetail = mysqli_fetch_assoc($result);
-					$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
+					$mail = mysqli_fetch_assoc($result);
+					$speech = "Email address of $person is {$mail['mailAddress']}" ;
+				}else if($infoType ==''){
+					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
+					$result = mysqli_query($connection,$query);
+					$mail = mysqli_fetch_assoc($result);
+					$speech = "Email address : {$mail['mailAddress']} \n Telephone number : {$mail['phoneNumber']} " ;
+				}else if($infoType =='telephone number'){
+					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
+					$result = mysqli_query($connection,$query);
+					$mail = mysqli_fetch_assoc($result);
+					$speech = "Telephone number of $person is {$mail['phoneNumber']}" ;
+				}
 
 				
 					
