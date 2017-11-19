@@ -26,11 +26,6 @@
 					$mail = mysqli_fetch_assoc($result);
 					$speech = "Email address of $person is {$mail['mailAddress']}" ;
 				
-				}else if($infoType == ''){ // when the whole contact detail is asked 
-					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
-					$result = mysqli_query($connection,$query);
-					$contactDetail = mysqli_fetch_assoc($result);
-					$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']}" ;
 				}
 
 				//create reponse to the dilogflow and echo it
