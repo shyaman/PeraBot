@@ -20,12 +20,16 @@
 				$splitName = explode(' ', $person);
 				
 				//fetch contact details according to information-type
-				if($infoType == 'email address'){ // when only the email address is asked
+				if($infoType == 'email address'){
 					$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
 					$result = mysqli_query($connection,$query);
 					$mail = mysqli_fetch_assoc($result);
 					$speech = "Email address of $person is {$mail['mailAddress']}" ;
-				
+				}else if($infoType ==''){
+					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
+					$result = mysqli_query($connection,$query);
+					$mail = mysqli_fetch_assoc($result);
+					$speech = "Email address : {$mail['mailAddress']}" ;
 				}
 
 				//create reponse to the dilogflow and echo it
