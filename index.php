@@ -18,7 +18,7 @@
 
 				echo $person; //testing
 
-				$splitName = explode(" ", $person);
+				$splitName = explode(' ', $person);
 
 				echo $splitName[0];
 				$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[0]'"; 
