@@ -20,7 +20,8 @@
 
 				$splitName = explode(" ", $person);
 
-				$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[1]' "; 
+				echo $splitName[0];
+				$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[0]'"; 
 			    $result = mysqli_query($connection,$query);
 			    $mail = mysqli_fetch_assoc($result);
 
