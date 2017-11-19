@@ -13,12 +13,13 @@
 				$infoType=$param->information->type; // extract information type
 				
 				$splitName = explode(' ', $person);
-				
-				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
-				$result = mysqli_query($connection,$query);
-				$contactDetail = mysqli_fetch_assoc($result);
-				$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
-				
+				if($infoType == 'email address'){
+					
+					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
+					$result = mysqli_query($connection,$query);
+					$contactDetail = mysqli_fetch_assoc($result);
+					$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
+				}
 				
 					
 				//create reponse to the dilogflow and echo it
