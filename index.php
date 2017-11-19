@@ -13,21 +13,17 @@
 				$infoType=$param->information-type; // extract information type
 				
 				$splitName = explode(' ', $person);
+				
+				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
+				$result = mysqli_query($connection,$query);
+				$contactDetail = mysqli_fetch_assoc($result);
+				
 				if($infoType == 'email address'){
-					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
-					$result = mysqli_query($connection,$query);
-					$mail = mysqli_fetch_assoc($result);
-					$speech = "Email address of $person is {$mail['mailAddress']}" ;
+					$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
 				}else if($infoType ==''){
-					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
-					$result = mysqli_query($connection,$query);
-					$mail = mysqli_fetch_assoc($result);
-					$speech = "Email address : {$mail['mailAddress']} \n Telephone number : {$mail['phoneNumber']} " ;
+					$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
 				}else if($infoType =='telephone number'){
-					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
-					$result = mysqli_query($connection,$query);
-					$mail = mysqli_fetch_assoc($result);
-					$speech = "Telephone number of $person is {$mail['phoneNumber']}" ;
+					$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
 				}
 
 				
