@@ -7,27 +7,33 @@
 		$requestBody = file_get_contents('php://input');
 		$json = json_decode($requestBody);
 
-		$intent = $json->result->metadata->intentName;
-		$param = $json->result->parameters;
+		$intent = $json->result->metadata->intentName;	//extract the intent
+		$param = $json->result->parameters;	//extract parameters
 
 		switch ($intent) {
 			case 'get_contact_information':
 				//include ('features/contacInformation');
 
-				$person =  $param->person;
+				$person =  $param->person;	//extract person name
 
-				echo $person;
+				echo $person; //testing
 
-				$query = "SELECT * FROM contacts"; 
+				$splitName = explode(" ", $person);
+
+				$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[1]' "; 
 			    $result = mysqli_query($connection,$query);
+			    $mail = mysqli_fetch_assoc($result);
 
-				echo "<table>"; 
-				echo '<tr><th>fName</th><th>lName</th><th>email</th></tr>';
-				while($row = mysqli_fetch_assoc($result)){  
-					echo "<tr><td>" . $row['fName'] . "</td><td>" . $row['lName'] . "</td><td>" . $row['mailAddress'] . "</td></tr>";  
-				}
+				echo $mail; //testing
 
-				echo "</table>";
+				$speech = "Email address of $person is $mail" ;
+
+				//create reponse to the dilogflow and echo it
+				$response = new \stdClass();
+				$response->speech = $speech;
+				$response->displayText = $speech;
+				$response->source = "webhook";
+				echo json_encode($response);
 
 				break;
 			
