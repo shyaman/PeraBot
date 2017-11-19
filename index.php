@@ -13,18 +13,24 @@
 				$infoType=$param->information->type; // extract information type
 				
 				$splitName = explode(' ', $person);
+				
 				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
 				$result = mysqli_query($connection,$query);
+				$contactDetail = mysqli_fetch_assoc($result);
+				
 				//fetch contact details according to information-type
-				if($infoType == 'email address'){
-					$mail = mysqli_fetch_assoc($result);
-					$speech = "Email address of $person is {$mail['mailAddress']}" ;
-				}else if($infoType ==''){
-					$mail = mysqli_fetch_assoc($result);
-					$speech = "Email address : {$mail['mailAddress']} \n Telephone number : {$mail['phoneNumber']} " ;
-				}else if($infoType =='telephone number'){
-					$mail = mysqli_fetch_assoc($result);
-					$speech = "Telephone number of $person is {$mail['phoneNumber']}" ;
+				switch ($infoType){
+					case 'email address':
+						$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
+						break;
+					case '':
+						$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
+						break;
+					case 'telephone number':
+						$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
+						break:
+					default:
+						break;
 				}
 					
 				//create reponse to the dilogflow and echo it
