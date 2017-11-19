@@ -15,16 +15,23 @@
 				//include ('features/contacInformation');
 
 				$person =  $param->person;	//extract person name
+				$infoType=$param->information-type // extract information type
 				
 				$splitName = explode(' ', $person);
-
-				//only search by fName, should be modified
-				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]'"; 
-			    $result = mysqli_query($connection,$query);
-			    $mail = mysqli_fetch_assoc($result);
-
-				$speech = "Email address of $person is {$mail['mailAddress']}" ;
-
+				echo "<h2> ".$infoType." login success </h2>";
+				//fetch contact details according to information-type
+				if($infoType == 'email address' || $infoType == 'email'){
+					$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
+					$result = mysqli_query($connection,$query);
+					$mail = mysqli_fetch_assoc($result);
+					$speech = "Email address of $person is {$mail['mailAddress']}" ;
+				}else if($infoType ==''){
+					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
+					$result = mysqli_query($connection,$query);
+					$mail = mysqli_fetch_assoc($result);
+					$speech = "Email address : {$mail['mailAddress']}" ;
+				}
+					
 				//create reponse to the dilogflow and echo it
 				$response = new \stdClass();
 				$response->speech = $speech;
