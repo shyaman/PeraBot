@@ -20,11 +20,16 @@
 				$splitName = explode(' ', $person);
 				
 				//fetch contact details according to information-type
+<<<<<<< HEAD
 				if($infoType == 'email address'){ // when only the email address is asked
+=======
+				if($infoType == 'email address'){
+>>>>>>> 00ba724c602ffca712d8b1223cd9ceb642c4922d
 					$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
 					$result = mysqli_query($connection,$query);
 					$mail = mysqli_fetch_assoc($result);
 					$speech = "Email address of $person is {$mail['mailAddress']}" ;
+<<<<<<< HEAD
 				}else if($infoType == 'telephone number'){ // when only the telephone number is asked
 					$query = "SELECT phoneNumber FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
 					$result = mysqli_query($connection,$query);
@@ -35,8 +40,15 @@
 					$result = mysqli_query($connection,$query);
 					$contactDetail = mysqli_fetch_assoc($result);
 					$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']}" ;
+=======
+				}else if($infoType ==''){
+					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
+					$result = mysqli_query($connection,$query);
+					$mail = mysqli_fetch_assoc($result);
+					$speech = "Email address : {$mail['mailAddress']}" ;
+>>>>>>> 00ba724c602ffca712d8b1223cd9ceb642c4922d
 				}
-
+					
 				//create reponse to the dilogflow and echo it
 				$response = new \stdClass();
 				$response->speech = $speech;
