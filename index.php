@@ -15,7 +15,8 @@
 				//include ('features/contacInformation');
 
 				$person =  $param->person;	//extract person name
-				
+				$infoType=$param->information-type;
+				echo "h2" .$infoType. "</h2>";
 				$splitName = explode(' ', $person);
 
 				//only search by fName, should be modified
