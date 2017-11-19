@@ -71,7 +71,9 @@ eg: What do I have after lunch break?
 
 #### Milestone 1 - Implimenting the feature of retrieving the contact details of the academic and non academic staff the faculty from the bot
 
-_16 Nov 2017 - Present_
+- 16 Nov 2017 -  Took initial steps to build a web app that contains contact information of staff using Microsoft Azure and established a database in it. Set the bot using Dialogflow and test some php codes.
+
+_19 Nov 2017 - Present_
 
 
 ### Support or Contact
