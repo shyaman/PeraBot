@@ -21,7 +21,7 @@
 
 				//fetch contact details according to information-type
 				if($infoType == 'email address' || $infoType == 'email'){
-					$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
+					$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[0]'";
 					$result = mysqli_query($connection,$query);
 					$mail = mysqli_fetch_assoc($result);
 					$speech = "Email address of $person is {$mail['mailAddress']}" ;
