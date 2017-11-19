@@ -14,31 +14,12 @@
 				
 				$splitName = explode(' ', $person);
 				
+				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
+				$result = mysqli_query($connection,$query);
+				$contactDetail = mysqli_fetch_assoc($result);
+				$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
 				
 				
-				//fetch contact details according to information-type
-				switch ($infoType){
-					case 'email address':
-						$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
-						$result = mysqli_query($connection,$query);
-						$contactDetail = mysqli_fetch_assoc($result);
-						$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
-						break;
-					case '':
-						$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
-						$result = mysqli_query($connection,$query);
-						$contactDetail = mysqli_fetch_assoc($result);
-						$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
-						break;
-					case 'telephone number':
-						$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
-						$result = mysqli_query($connection,$query);
-						$contactDetail = mysqli_fetch_assoc($result);
-						$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
-						break:
-					default:
-						break;
-				}
 					
 				//create reponse to the dilogflow and echo it
 				$response = new \stdClass();
