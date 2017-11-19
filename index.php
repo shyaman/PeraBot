@@ -16,19 +16,14 @@
 
 				$person =  $param->person;	//extract person name
 
-				echo $person; //testing
-
 				$splitName = explode(' ', $person);
 
-				echo $splitName[0];
-
+				//only search by fName, should be modified
 				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]'"; 
 			    $result = mysqli_query($connection,$query);
 			    $mail = mysqli_fetch_assoc($result);
 
-				echo $mail['mailAddress']; //testing
-
-				$speech = "Email address of $person is '{$mail['mailAddress']}'" ;
+				$speech = "Email address of $person is {$mail['mailAddress']}" ;
 
 				//create reponse to the dilogflow and echo it
 				$response = new \stdClass();
