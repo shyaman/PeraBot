@@ -1,10 +1,9 @@
 <?php 
-try {
-    $conn = new PDO("sqlsrv:server = tcp:perabot.database.windows.net,1433; Database = perabot", "perabotDev", "per@bot1");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
+	$connection = mysqli_connect('127.0.0.1:56116','azure','6#vWHD_$','localdb');
+
+	if (mysqli_connect_errno()) {
+		die('Database connection failed' . mysqli_connect_errno());
+	}else{
+		// echo "connection successful";
+	}
 ?>
