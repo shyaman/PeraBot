@@ -20,7 +20,7 @@
 					$result = mysqli_query($connection,$query);
 					$mail = mysqli_fetch_assoc($result);
 					$speech = "Email address of $person is {$mail['mailAddress']}" ;
-				}else if($infoType ==''){
+				}else if($infoType == ''){
 					$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
 					$result = mysqli_query($connection,$query);
 					$mail = mysqli_fetch_assoc($result);
