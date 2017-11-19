@@ -32,7 +32,7 @@
 					$speech = "Email address : {$mail['mailAddress']}" ;
 				}*/
 					
-				$query = "SELECT mailAddress FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
+				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' and lName = '$splitName[1]'";
 					$result = mysqli_query($connection,$query);
 					$mail = mysqli_fetch_assoc($result);
 					$speech = "Email address of $person is {$mail['mailAddress']}" ;
