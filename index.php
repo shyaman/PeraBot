@@ -22,7 +22,11 @@
 				//fetch the result according to the information type
 				
 				if($infoType == 'email address'){
-					$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
+					if($contactDetail['mailAddress'] != ''){
+						$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
+					}else{
+						$speech = "Sorry ! $person's  email address is not there" ;
+					}
 				}else if($infoType == ''){
 					$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
 				}else if($infoType == 'telephone number'){
