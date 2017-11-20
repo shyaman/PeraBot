@@ -11,8 +11,6 @@
 				//include ('features/contacInformation');
 				$person =  $param->person;	//extract person name
 				$infoType=$param->information_type; // extract information type
-
-				echo $person." ".$infoType;
 				
 				$splitName = explode(' ', $person);
 				
