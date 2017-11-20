@@ -20,7 +20,11 @@
 				$contactDetail = mysqli_fetch_assoc($result);
 				
 				//fetch the result according to the information type
-				if($result != ''){
+				
+				if($results->num_rows === 0){
+					$speech = "Sorry ! No such person in the contact list" ;
+					
+				}else{
 					if($infoType == 'email address'){
 						if($contactDetail['mailAddress'] != ''){
 							$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
@@ -42,8 +46,6 @@
 							$speech = "Sorry ! $person's  telephone number is not there" ;
 						}
 					}
-				}else{
-					$speech = "Sorry ! No such person in the contact list" ;
 				}
 				
 				//create reponse to the dilogflow and echo it
