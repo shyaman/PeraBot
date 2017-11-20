@@ -18,6 +18,7 @@
 				$result = mysqli_query($connection,$query);
 				$contactDetail = mysqli_fetch_assoc($result);
 				
+				echo $infoType;
 				if($infoType == 'email address'){
 					$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
 				}else if($infoType == ''){
