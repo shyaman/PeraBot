@@ -36,11 +36,7 @@
 						$speech = "Telephone number : {$contactDetail['phoneNumber']} \n Sorry ! No email address was found" ;
 					}
 				}else if($infoType == 'telephone number'){
-					if({$contactDetail['phoneNumber']} != ''){
-						$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
-					}else{
-						$speech = "Sorry ! $person's  telephone number is not there" ;
-					}
+					$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
 				}
 				
 				//create reponse to the dilogflow and echo it
