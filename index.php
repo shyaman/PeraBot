@@ -11,14 +11,13 @@
 			case 'get_contact_information':
 				//include ('features/contacInformation');
 				$person =  $param->person;	//extract person name
-				$infoType=$param->information_type; // extract information type
+				$infoType=$param->information-type; // extract information type
 				
 				$splitName = explode(' ', $person);
 				
 				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
 				$result = mysqli_query($connection,$query);
 				$contactDetail = mysqli_fetch_assoc($result);
-<<<<<<< HEAD
 				
 				//fetch the result according to the information type
 				if($result != ''){
@@ -45,15 +44,6 @@
 					}
 				}else{
 					$speech = "Sorry ! No such person in the contact list" ;
-=======
-
-				if($infoType == 'email address'){
-					$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
-				}else if($infoType == ''){
-					$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
-				}else if($infoType == 'telephone number'){
-					$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
->>>>>>> 3e2a212a6877f2d8b4addae136b6d491de36942d
 				}
 				
 				//create reponse to the dilogflow and echo it
