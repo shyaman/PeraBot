@@ -71,15 +71,15 @@ eg: What do I have after lunch break?
 
 #### Milestone 1 - Implementing the feature of retrieving the contact details of the academic and non academic staff the faculty from the bot
 
-_16 Nov 2017_
+__16 Nov 2017__
 
 -  Took initial steps to build a web app that contains contact information of staff using Microsoft Azure and established a database in it. Set the bot using Dialogflow and test some php codes.
 
 - Web app was deployed by using github repository as the source.
 
-- Updated the database with the [contact information] (http://www.ce.pdn.ac.lk/staff.html#academic)
+- Updated the database with the [contact information](http://www.ce.pdn.ac.lk/staff.html#academic)
 
-_18 Nov 2017_
+__18 Nov 2017__
 
 - We were able to implement the feature. But still there are some drawbacks in person name recognizing in NLP
 
