@@ -10,7 +10,7 @@
 			case 'get_contact_information':
 				//include ('features/contacInformation');
 				$person =  $param->person;	//extract person name
-				$infoType=$param->information-type; // extract information type
+				$infoType=$param->'information-type'; // extract information type
 				
 				$splitName = explode(' ', $person);
 				
