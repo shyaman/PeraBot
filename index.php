@@ -30,11 +30,8 @@
 				}else if($infoType == ''){
 					if($contactDetail['mailAddress'] != '' && $contactDetail['phoneNumber'] != ''){
 						$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
-					}else if($contactDetail['mailAddress'] == ''){
-						$speech = "Email address : {$contactDetail['mailAddress']} \n Sorry ! No Telephone number was found" ;
-						
-					}else if($contactDetail['phoneNumber'] == ''){
-						$speech = "Telephone number : {$contactDetail['phoneNumber']} \n Sorry ! No email address was found" ;
+					}else{
+						$speech = "Sorry ! " ;
 					}
 				}else if($infoType == 'telephone number'){
 					$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
