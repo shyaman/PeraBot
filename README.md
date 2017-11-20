@@ -77,11 +77,11 @@ __16 Nov 2017__
 
 - Web app was deployed by using github repository as the source.
 
-- Updated the database with the [contact information](http://www.ce.pdn.ac.lk/staff.html#academic)
+- Updated the database with the [contact information](http://www.ce.pdn.ac.lk/staff.html#academic).
 
 __18 Nov 2017__
 
-- We were able to implement the feature. But still there are some drawbacks in person name recognizing in NLP
+- We were able to implement the feature. But still there are some drawbacks in person name recognizing in NLP.
 
 
 ### Support or Contact
