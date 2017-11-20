@@ -11,7 +11,7 @@
 			case 'get_contact_information':
 				//include ('features/contacInformation');
 				$person =  $param->person;	//extract person name
-				$infoType=$param->information-type; // extract information type
+				$infoType=$param->information_type; // extract information type
 				
 				$splitName = explode(' ', $person);
 				
@@ -29,7 +29,7 @@
 					}
 				}else if($infoType == ''){
 					if($contactDetail['mailAddress'] != '' && $contactDetail['phoneNumber'] != ''){
-							$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
+						$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
 					}else if($contactDetail['mailAddress'] == ''){
 						$speech = "Telephone number : {$contactDetail['phoneNumber']} \n Sorry ! No email address was found" ;
 					}else if($contactDetail['phoneNumber'] == ''){
