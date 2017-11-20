@@ -20,26 +20,29 @@
 				$contactDetail = mysqli_fetch_assoc($result);
 				
 				//fetch the result according to the information type
-				
-				if($infoType == 'email address'){
-					if($contactDetail['mailAddress'] != ''){
-						$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
-					}else{
-						$speech = "Sorry ! $person's  email address is not there" ;
-					}
-				}else if($infoType == ''){
-					if($contactDetail['mailAddress'] != '' && $contactDetail['phoneNumber'] != ''){
-						$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
-					}else if($contactDetail['mailAddress'] != '' && $contactDetail['phoneNumber'] == ''){
-						$speech = "Email address : {$contactDetail['mailAddress']} \n Sorry ! No Telephone number was found" ;
-					}else if($contactDetail['mailAddress'] == '' && $contactDetail['phoneNumber'] != ''){
-						$speech = "Telephone number : {$contactDetail['phoneNumber']} \n Sorry ! No email address was found" ;
-					}
-				}else if($infoType == 'telephone number'){
-					if($contactDetail['phoneNumber'] != ''){
-						$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
-					}else{
-						$speech = "Sorry ! $person's  telephone number is not there" ;
+				if($result->num_rows === 0){
+					$speech = "Sorry ! No such person in the contact list" ;
+				}else{
+					if($infoType == 'email address'){
+						if($contactDetail['mailAddress'] != ''){
+							$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
+						}else{
+							$speech = "Sorry ! $person's  email address is not there" ;
+						}
+					}else if($infoType == ''){
+						if($contactDetail['mailAddress'] != '' && $contactDetail['phoneNumber'] != ''){
+							$speech = "Email address : {$contactDetail['mailAddress']} \n Telephone number : {$contactDetail['phoneNumber']} " ;
+						}else if($contactDetail['mailAddress'] != '' && $contactDetail['phoneNumber'] == ''){
+							$speech = "Email address : {$contactDetail['mailAddress']} \n Sorry ! No Telephone number was found" ;
+						}else if($contactDetail['mailAddress'] == '' && $contactDetail['phoneNumber'] != ''){
+							$speech = "Telephone number : {$contactDetail['phoneNumber']} \n Sorry ! No email address was found" ;
+						}
+					}else if($infoType == 'telephone number'){
+						if($contactDetail['phoneNumber'] != ''){
+							$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
+						}else{
+							$speech = "Sorry ! $person's  telephone number is not there" ;
+						}
 					}
 				}
 				
