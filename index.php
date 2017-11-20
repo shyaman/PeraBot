@@ -27,7 +27,7 @@
 						if($contactDetail['mailAddress'] != ''){
 							$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
 						}else{
-							$speech = "Sorry ! $person's  email address is not there" ;
+							$speech = "Sorry ! $person's  email address is not in the contact list" ;
 						}
 					}else if($infoType == ''){
 						if($contactDetail['mailAddress'] != '' && $contactDetail['phoneNumber'] != ''){
@@ -41,7 +41,7 @@
 						if($contactDetail['phoneNumber'] != ''){
 							$speech = "Telephone number of $person is {$contactDetail['phoneNumber']}" ;
 						}else{
-							$speech = "Sorry ! $person's  telephone number is not there" ;
+							$speech = "Sorry ! $person's  telephone number is not in the contact list" ;
 						}
 					}
 				}
