@@ -12,14 +12,15 @@
 				$person =  $param->person;	//extract person name
 				$infoType=$param->information_type; // extract information type
 				
+				echo $person;
+				echo $infoType;
+				
 				$splitName = explode(' ', $person);
 				
 				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
 				$result = mysqli_query($connection,$query);
 				$contactDetail = mysqli_fetch_assoc($result);
 
-				echo $person;
-				echo $infoType;
 				if($infoType == 'email address'){
 					$speech = "Email address of $person is {$contactDetail['mailAddress']}" ;
 				}else if($infoType == ''){
