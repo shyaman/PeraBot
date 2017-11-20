@@ -11,10 +11,7 @@
 				//include ('features/contacInformation');
 				$person =  $param->person;	//extract person name
 				$infoType=$param->information_type; // extract information type
-				
-				echo $person;
-				echo $infoType;
-				
+
 				$splitName = explode(' ', $person);
 				
 				$query = "SELECT * FROM contacts WHERE fName = '$splitName[0]' AND lName = '$splitName[1]'";
