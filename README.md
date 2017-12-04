@@ -83,6 +83,7 @@ __18 Nov 2017__
 
 - We were able to implement the feature. But still there are some drawbacks in person name recognizing in NLP.
 
+## We have moved to [https://shyaman.github.io/perabot-botpress/](https://shyaman.github.io/perabot-botpress/)
 
 ### Support or Contact
 
